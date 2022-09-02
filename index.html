@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      height: 100vh;
+      font-family: 'Red Hat Display', sans-serif;
+      display: flex;
+      flex-direction: column;
+      color: hsl(224, 23%, 55%);
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      background-image: url(./images/pattern-background-desktop.svg);
+    }
+    .card{
+      width: 25%;
+      border-radius: 20px;
+      background-color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+    @media(max-width:992px){
+      .card{
+        width: 30%;
+      }
+    }
+    @media(max-width:768px){
+      .card{
+        width: 50%;
+      }
+    }
+    @media(max-width:500px){
+      .card{
+        width: 80%;
+      }
+    }
+    .card-img img{
+      max-width: 100%;
+      object-fit: cover;
+    }
+    
+    .card-text{
+      padding: 20px;
+    }
+    .card-text>*{
+      padding: 15px;
+    }
+    .card-text h1 ,h4, .cancel{
+      color: hsl(223, 47%, 23%);
+    }
+    
+    .music{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 15px;
+      padding: 10px;
+    }
+    .flex{
+      display: flex;
+    }
+    .card-text button{
+      width: 100%;
+      background-color: hwb(245 16% 12%);
+      color: white;
+      border: 0 none;
+      border-radius: 10px;
+      padding: 15px 0;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+    .card-text .cancel{
+      cursor: pointer;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="card-img">
+      <img src="./images/illustration-hero.svg" alt="">
+    </div>
+    <section class="card-text">
+      <h1>Order Summary</h1>
+
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!</p>
+      <div class="music">
+        <div class="flex">
+          <img src="./images/icon-music.svg" alt="">
+          <div>
+            <h4>Annual Plan</h4>
+            <p>$59.99/year</p>
+          </div>
+        </div>
+        <a href="#">Change</a>
+      </div>
+
+      <button>Proceed to Payment</button>
+      <div class="cancel">Cancel Order </div>
+    </section>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/thidarnyien">Thidar Nyein</a>.
+  </div>
+</body>
+</html>
